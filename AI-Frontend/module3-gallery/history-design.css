@@ -1,0 +1,613 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background: #090d16;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    min-height: 100vh;
+
+}
+
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.page-header {
+
+    width: 100%;
+
+    min-height: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    padding: 15px 25px;
+
+    background: #0b0f18;
+
+    border-bottom:
+        1px solid
+        #202735;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+}
+
+
+.page-header h1 {
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    color: #f5f7fb;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+.page-header button {
+
+    padding: 12px 22px;
+
+    border-radius: 12px;
+
+    border:
+        1px solid
+        #303847;
+
+    background: #151b27;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+.page-header button:hover {
+
+    background: #202735;
+
+}
+
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.details-page {
+
+    width: min(
+        1400px,
+        calc(100% - 60px)
+    );
+
+    margin: 45px auto 80px;
+
+}
+
+
+
+/* =========================================
+   COMMON SECTION
+========================================= */
+
+.preview-section,
+.code-section,
+.explanation-section,
+.tags-section {
+
+    background: #111827;
+
+    border:
+        1px solid
+        #263044;
+
+    border-radius: 22px;
+
+    padding: 32px;
+
+    margin-bottom: 38px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.2);
+
+}
+
+
+.preview-section h2,
+.code-section h2,
+.explanation-section h2,
+.tags-section h2 {
+
+    font-size: 27px;
+
+    margin-bottom: 28px;
+
+    color: #f5f7fb;
+
+}
+
+
+
+/* =========================================
+   VIEW PREVIEW BUTTON
+========================================= */
+
+.view-preview-btn {
+
+    padding: 15px 28px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: #111827;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+    margin-bottom: 25px;
+
+}
+
+
+.view-preview-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px
+        rgba(255, 255, 255, 0.12);
+
+}
+
+
+
+/* =========================================
+   SMALL PREVIEW
+========================================= */
+
+.preview-wrapper {
+
+    width: 100%;
+
+    height: 430px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    border:
+        1px solid
+        #303847;
+
+}
+
+
+#live-preview {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    background: #ffffff;
+
+}
+
+
+
+/* =========================================
+   CODE TABS
+========================================= */
+
+.code-tabs {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.code-tabs button {
+
+    padding: 12px 24px;
+
+    border-radius: 11px;
+
+    border:
+        1px solid
+        #303847;
+
+    background: #18202e;
+
+    color: #dce3ef;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+.code-tabs button:hover {
+
+    background: #222c3d;
+
+}
+
+
+.code-tabs button.active {
+
+    background: #ffffff;
+
+    color: #111827;
+
+    border-color: #ffffff;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =========================================
+   CODE OUTPUT
+========================================= */
+
+#code-output {
+
+    width: 100%;
+
+    min-height: 460px;
+
+    max-height: 600px;
+
+    overflow: auto;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    background: #070a10;
+
+    border:
+        1px solid
+        #1d2635;
+
+    color: #dce3ef;
+
+    font-family:
+        Consolas,
+        Monaco,
+        monospace;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    white-space: pre-wrap;
+
+    word-break: break-word;
+
+}
+
+
+
+/* =========================================
+   EXPLANATION
+========================================= */
+
+.explanation-card {
+
+    background: #151d2b;
+
+    border:
+        1px solid
+        #283348;
+
+    border-radius: 15px;
+
+    padding: 24px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.explanation-card h3 {
+
+    font-size: 20px;
+
+    margin-bottom: 12px;
+
+    color: #ffffff;
+
+}
+
+
+.explanation-card p {
+
+    color: #c5cedc;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+
+
+/* =========================================
+   TAG CARDS
+========================================= */
+
+.tag-card {
+
+    background: #151d2b;
+
+    border:
+        1px solid
+        #283348;
+
+    border-radius: 15px;
+
+    padding: 22px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.tag-card h3 {
+
+    margin-bottom: 10px;
+
+    font-size: 19px;
+
+}
+
+
+.tag-card p {
+
+    color: #c5cedc;
+
+    line-height: 1.6;
+
+}
+
+
+
+/* =========================================
+   FULL SCREEN PREVIEW
+========================================= */
+
+.fullscreen-preview {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+
+    height: 100vh;
+
+    background: #ffffff;
+
+    z-index: 9999;
+
+    display: none;
+
+}
+
+
+.fullscreen-preview.active {
+
+    display: block;
+
+}
+
+
+
+/* =========================================
+   FULL SCREEN IFRAME
+========================================= */
+
+#fullscreen-preview-frame {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    background: #ffffff;
+
+}
+
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.close-preview {
+
+    position: fixed;
+
+    top: 20px;
+
+    right: 25px;
+
+    width: 50px;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(
+        0,
+        0,
+        0,
+        0.75
+    );
+
+    color: #ffffff;
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    z-index: 10001;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: 0.2s ease;
+
+}
+
+
+.close-preview:hover {
+
+    background: #000000;
+
+    transform: scale(1.05);
+
+}
+
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .page-header {
+
+        gap: 15px;
+
+        padding: 12px 15px;
+
+    }
+
+
+    .page-header h1 {
+
+        font-size: 20px;
+
+    }
+
+
+    .details-page {
+
+        width:
+            calc(100% - 25px);
+
+        margin-top: 25px;
+
+    }
+
+
+    .preview-section,
+    .code-section,
+    .explanation-section,
+    .tags-section {
+
+        padding: 20px;
+
+        border-radius: 16px;
+
+    }
+
+
+    .preview-wrapper {
+
+        height: 350px;
+
+    }
+
+
+    #code-output {
+
+        min-height: 350px;
+
+    }
+
+}

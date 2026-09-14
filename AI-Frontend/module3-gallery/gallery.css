@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background: #faf9ff;
+
+    color: #222;
+}
+
+
+.gallery-page {
+    min-height: 100vh;
+}
+
+
+.gallery-header {
+    height: 75px;
+
+    background: white;
+
+    border-bottom: 1px solid #e5e5ea;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 0 40px;
+}
+
+
+.gallery-header h1 {
+    font-size: 23px;
+}
+
+
+.back {
+    color: #633bbc;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    display: flex;
+
+    gap: 7px;
+}
+
+
+.count {
+    background: #f0eaff;
+
+    color: #633bbc;
+
+    padding: 5px 10px;
+
+    border-radius: 15px;
+
+    font-size: 12px;
+}
+
+
+main {
+    max-width: 1200px;
+
+    margin: 35px auto;
+
+    padding: 0 30px;
+}
+
+
+.design-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.design-card {
+    background: white;
+
+    border: 1px solid #e3e1ea;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    transition: .2s;
+}
+
+
+.design-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.08);
+}
+
+
+.design-preview {
+    height: 220px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #17102e,
+            #633bbc
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+.design-info {
+    padding: 18px;
+}
+
+
+.design-info h3 {
+    margin-bottom: 6px;
+}
+
+
+.design-info p {
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 16px;
+}
+
+
+.design-actions {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.design-actions button {
+    flex: 1;
+
+    padding: 9px;
+
+    border-radius: 8px;
+
+    border: 1px solid #ddd;
+
+    background: white;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+
+.design-actions button:hover {
+    border-color: #633bbc;
+
+    color: #633bbc;
+}
+
+
+.design-actions .select {
+    background: #633bbc;
+
+    color: white;
+
+    border-color: #633bbc;
+}
+
+
+.design-actions .select:hover {
+    background: #5330a4;
+
+    color: white;
+}
+
+
+/* SAVE BUTTON */
+
+.design-actions .save {
+    flex: 0 0 42px;
+
+    color: #633bbc;
+
+    font-size: 15px;
+}
+
+
+.design-actions .save.saved {
+    background: #633bbc;
+
+    color: white;
+
+    border-color: #633bbc;
+}
+
+
+/* PREVIEW MODAL */
+
+/* =========================================
+   FULL SCREEN DESIGN PREVIEW
+========================================= */
+
+.preview-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: #ffffff;
+
+    z-index: 99999;
+
+    overflow: hidden;
+
+}
+
+
+/* HIDE */
+
+.preview-modal.hidden {
+
+    display: none;
+
+}
+
+
+/* GENERATED WEBSITE */
+
+.preview-modal iframe {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+
+    display: block;
+
+    background: #ffffff;
+
+}
+
+
+/* CLOSE BUTTON */
+
+.close-preview {
+
+    position: fixed;
+
+    top: 20px;
+    right: 20px;
+
+    width: 44px;
+    height: 44px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 100000;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+.close-preview:hover {
+
+    transform: scale(1.08);
+
+    background: rgba(0, 0, 0, 0.9);
+
+}
+
+/* RESPONSIVE*/
+
+@media(max-width:900px) {
+
+    .design-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media(max-width:600px) {
+
+    .gallery-header {
+        padding: 0 20px;
+
+        gap: 12px;
+    }
+
+
+    .gallery-header h1 {
+        font-size: 18px;
+    }
+
+
+    .design-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .design-actions {
+        flex-wrap: wrap;
+    }
+
+
+    .design-actions .save {
+        flex: 1;
+    }
+
+
+    .preview-container {
+        width: 98%;
+
+        height: 90vh;
+    }
+
+}
+.card-preview-frame {
+    width: 100%;
+    height: 220px;
+    border: none;
+    display: block;
+    background: white;
+}
+
+.design-preview {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: white;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    width: 100%;
+}
+
+.empty-state h2 {
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    margin-bottom: 20px;
+}
+
+.empty-state a {
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+}

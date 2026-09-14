@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Frontend - Generate</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="generate.css">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <!-- SIDEBAR  -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span>AI Frontend</span>
+        </div>
+
+        <nav>
+
+            <!-- Dashboard -->
+            <a href="#" id="dashboard-link" class="active">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <!-- Saved Designs -->
+            <a href="#" id="saved-link">
+                <i class="fa-solid fa-bookmark"></i>
+                <span>Saved Designs</span>
+            </a>
+
+            <!-- History -->
+            <a href="#" id="history-link">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span>History</span>
+            </a>
+
+            <!-- Settings -->
+            <a href="#" id="settings-link">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+            <!-- Profile -->
+            <a href="#" id="profile-link">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </a>
+
+            <!-- Logout -->
+            <a href="#" id="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN AREA  -->
+
+    <div class="main-area">
+
+        <!--HEADER-->
+
+        <header class="top-header">
+
+            <div class="header-title" id="header-title">
+                Dashboard
+            </div>
+
+            <div class="header-right">
+
+                <button class="notification-btn">
+                    <i class="fa-regular fa-bell"></i>
+                </button>
+
+                <div class="user-avatar" id="header-avatar">
+                    M
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!--DASHBOARD VIEW -->
+
+        <main class="content" id="dashboard-view">
+
+            <div class="page-heading">
+
+                <span class="eyebrow">
+                    AI POWERED
+                </span>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+                <p>
+                    Create beautiful frontend designs using AI.
+                </p>
+
+            </div>
+
+
+            <!-- Dashboard Welcome -->
+
+            <section class="dashboard-welcome">
+
+                <div class="welcome-content">
+
+                    <span class="welcome-badge">
+                        <i class="fa-solid fa-sparkles"></i>
+                        AI Frontend
+                    </span>
+
+                    <h2>
+                        Turn your ideas into
+                        <span>beautiful websites.</span>
+                    </h2>
+
+                    <p>
+                        Describe your website or provide half code
+                        and generate multiple unique frontend designs.
+                    </p>
+
+                    <button class="dashboard-generate-btn"
+                        id="dashboard-generate-btn">
+
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                        Start Generating
+
+                    </button>
+
+                </div>
+
+
+                <div class="welcome-visual">
+
+                    <div class="visual-glow"></div>
+
+                    <div class="visual-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+
+                    <div class="floating-card card-one">
+                        <i class="fa-solid fa-code"></i>
+                        HTML
+                    </div>
+
+                    <div class="floating-card card-two">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        CSS
+                    </div>
+
+                    <div class="floating-card card-three">
+                        <i class="fa-brands fa-js"></i>
+                        JS
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Dashboard Stats -->
+
+            <section class="dashboard-stats">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+
+                    <div>
+                        <span class="stat-label">
+                            Total Generations
+                        </span>
+
+                        <strong id="total-generations">
+                            0
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon pink">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div>
+                        <span class="stat-label">
+                            Saved Designs
+                        </span>
+
+                        <strong id="total-saved">
+                            0
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+
+                    <div>
+                        <span class="stat-label">
+                            Recent Projects
+                        </span>
+
+                        <strong id="recent-projects">
+                            0
+                        </strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Dashboard Quick Actions -->
+
+            <section class="quick-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>
+                            Quick Actions
+                        </h2>
+
+                        <p>
+                            Start working on your frontend project.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="quick-grid">
+
+                    <button class="quick-card"
+                        id="quick-generate">
+
+                        <div class="quick-icon">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+
+                        <div>
+                            <h3>
+                                Generate Design
+                            </h3>
+
+                            <p>
+                                Create multiple unique designs
+                            </p>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right arrow"></i>
+
+                    </button>
+
+
+                    <button class="quick-card"
+                        id="quick-saved">
+
+                        <div class="quick-icon">
+                            <i class="fa-solid fa-bookmark"></i>
+                        </div>
+
+                        <div>
+                            <h3>
+                                Saved Designs
+                            </h3>
+
+                            <p>
+                                View your saved designs
+                            </p>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right arrow"></i>
+
+                    </button>
+
+
+                    <button class="quick-card"
+                        id="quick-history">
+
+                        <div class="quick-icon">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+
+                        <div>
+                            <h3>
+                                Generation History
+                            </h3>
+
+                            <p>
+                                View previous generations
+                            </p>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right arrow"></i>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!--GENERATE VIEW-->
+
+        <main class="content special-view hidden"
+            id="generate-view">
+
+            <div class="page-heading">
+
+                <span class="eyebrow">
+                    AI POWERED
+                </span>
+
+                <h1>
+                    Generate Your Design
+                </h1>
+
+                <p>
+                    Describe your website or provide existing code
+                    and let AI create multiple designs for you.
+                </p>
+
+            </div>
+
+
+            <section class="generation-card">
+
+                <!-- MODE -->
+
+                <div class="mode-tabs">
+
+                    <button class="mode-tab active"
+                        data-mode="prompt">
+
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                        Prompt
+
+                    </button>
+
+
+                    <button class="mode-tab"
+                        data-mode="code">
+
+                        <i class="fa-solid fa-code"></i>
+
+                        Half Code
+
+                    </button>
+
+                </div>
+
+
+                <!-- INPUT -->
+
+                <div class="input-section">
+
+                    <label for="generation-input">
+
+                        <span id="input-label">
+                            Describe your website
+                        </span>
+
+                    </label>
+
+
+                    <textarea
+                        id="generation-input"
+                        maxlength="2000"
+                        placeholder="Example: Create a modern student portfolio website with projects, skills, education and contact sections..."></textarea>
+
+
+                    <div class="input-footer">
+
+                        <span>
+                            AI will generate Multiple unique designs
+                        </span>
+
+                        <span id="char-count">
+                            0 / 2000
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GENERATE -->
+
+                <button class="generate-btn"
+                    id="generate-btn">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    Generate Multiple Designs
+
+                </button>
+
+
+                <!-- LOADING -->
+
+                <div class="loading-container hidden"
+                    id="loading-container">
+
+                    <div class="loader"></div>
+
+                    <h3>
+                        Generating your designs...
+                    </h3>
+
+                    <p>
+                        AI is creating 5 unique design variations.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!--SAVED DESIGNS VIEW-->
+
+        <main class="content special-view hidden"
+            id="saved-view">
+
+            <div class="page-heading">
+
+                <span class="eyebrow">
+                    YOUR COLLECTION
+                </span>
+
+                <h1>
+                    Saved Designs
+                </h1>
+
+                <p>
+                    Your favourite frontend designs are stored here.
+                </p>
+
+            </div>
+
+
+            <section class="saved-card">
+
+                <div class="saved-header">
+
+                    <div>
+                        <h2>
+                            My Designs
+                        </h2>
+
+                        <p id="saved-count-text">
+                            0 saved designs
+                        </p>
+                    </div>
+
+                    <button class="small-action-btn"
+                        id="saved-refresh">
+
+                        <i class="fa-solid fa-rotate"></i>
+                        Refresh
+
+                    </button>
+
+                </div>
+
+
+                <div class="saved-grid"
+                    id="saved-grid">
+
+                    <!-- Saved designs generated by JS -->
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!--HISTORY VIEW-->
+
+        <main class="content special-view hidden"
+            id="history-view">
+
+            <div class="page-heading">
+
+                <span class="eyebrow">
+                    ACTIVITY
+                </span>
+
+                <h1>
+                    Generation History
+                </h1>
+
+                <p>
+                    View all your previous design generations.
+                </p>
+
+            </div>
+
+
+            <section class="history-card">
+
+                <div class="history-header">
+
+                    <div>
+                        <h2>
+                            Recent Generations
+                        </h2>
+
+                        <p>
+                            Your previous AI design requests.
+                        </p>
+                    </div>
+
+                    <button class="small-action-btn"
+                        id="clear-history">
+
+                        <i class="fa-solid fa-trash"></i>
+                        Clear History
+
+                    </button>
+
+                </div>
+
+
+                <div class="history-list"
+                    id="history-list">
+
+                    <!-- History generated by JS -->
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!--SETTINGS VIEW-->
+
+        <main class="content special-view hidden"
+            id="settings-view">
+
+            <div class="page-heading">
+
+                <span class="eyebrow">
+                    PREFERENCES
+                </span>
+
+                <h1>
+                    Settings
+                </h1>
+
+                <p>
+                    Manage your AI Frontend preferences.
+                </p>
+
+            </div>
+
+
+            <section class="settings-card">
+
+                <div class="settings-section">
+
+                    <div class="settings-title">
+
+                        <div class="settings-icon">
+                            <i class="fa-solid fa-sliders"></i>
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Generation Preferences
+                            </h2>
+
+                            <p>
+                                Customize how your designs are generated.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="setting-row">
+
+                        <div>
+
+                            <h3>
+                                Default Generation Mode
+                            </h3>
+
+                            <p>
+                                Choose the mode used when generating designs.
+                            </p>
+
+                        </div>
+
+
+                        <select id="default-mode">
+
+                            <option value="prompt">
+                                Prompt
+                            </option>
+
+                            <option value="code">
+                                Half Code
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="setting-row">
+
+                        <div>
+
+                            <h3>
+                                Auto Save Designs
+                            </h3>
+
+                            <p>
+                                Automatically save generated designs
+                                to your history.
+                            </p>
+
+                        </div>
+
+
+                        <label class="switch">
+
+                            <input type="checkbox"
+                                id="auto-save-setting"
+                                checked>
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="settings-section">
+
+                    <div class="settings-title">
+
+                        <div class="settings-icon">
+                            <i class="fa-regular fa-bell"></i>
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Notifications
+                            </h2>
+
+                            <p>
+                                Control application notifications.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="setting-row">
+
+                        <div>
+
+                            <h3>
+                                Generation Notifications
+                            </h3>
+
+                            <p>
+                                Notify me when designs are ready.
+                            </p>
+
+                        </div>
+
+
+                        <label class="switch">
+
+                            <input type="checkbox"
+                                id="notification-setting"
+                                checked>
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <button class="primary-btn"
+                    id="save-settings">
+
+                    <i class="fa-solid fa-check"></i>
+
+                    Save Settings
+
+                </button>
+
+
+                <span class="save-message"
+                    id="settings-message">
+                </span>
+
+            </section>
+
+        </main>
+
+
+        <!--PROFILE VIEW-->
+
+        <main class="content special-view hidden"
+            id="profile-view">
+
+            <div class="page-heading">
+
+                <span class="eyebrow">
+                    ACCOUNT
+                </span>
+
+                <h1>
+                    Profile
+                </h1>
+
+                <p>
+                    Manage your account information.
+                </p>
+
+            </div>
+
+
+            <section class="profile-card">
+
+                <div class="profile-top">
+
+                    <div class="large-avatar"
+                        id="profile-avatar">
+
+                        M
+
+                    </div>
+
+
+                    <div>
+
+                        <h2 id="profile-name-display">
+                            Manasa
+                        </h2>
+
+                        <p id="profile-email-display">
+                            manasa@example.com
+                        </p>
+
+                        <span class="member-badge">
+
+                            <i class="fa-solid fa-star"></i>
+
+                            AI Frontend Member
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-form">
+
+                    <div class="form-group">
+
+                        <label for="profile-name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="profile-name"
+                            placeholder="Enter your name">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="profile-email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="profile-email"
+                            placeholder="Enter your email">
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-actions">
+
+                    <button class="secondary-btn"
+                        id="cancel-profile">
+
+                        Cancel
+
+                    </button>
+
+
+                    <button class="primary-btn"
+                        id="save-profile">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Save Changes
+
+                    </button>
+
+                </div>
+
+
+                <span class="save-message"
+                    id="profile-message">
+                </span>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+<!--LOGOUT MODAL-->
+
+<div class="logout-modal hidden"
+    id="logout-modal">
+
+    <div class="logout-box">
+
+        <div class="logout-icon">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+        </div>
+
+
+        <h2>
+            Logout?
+        </h2>
+
+
+        <p>
+            Are you sure you want to logout from AI Frontend?
+        </p>
+
+
+        <div class="logout-actions">
+
+            <button class="cancel-btn"
+                id="cancel-logout">
+
+                Cancel
+
+            </button>
+
+
+            <button class="confirm-logout"
+                id="confirm-logout">
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!--JAVASCRIPT-->
+
+<script src="generate.js"></script>
+
+</body>
+
+</html>

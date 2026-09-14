@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>AI Frontend - Code</title>
+
+<link rel="stylesheet" href="code.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="code-header">
+
+    <a id="code-back" href="#" aria-label="Back">
+         <i class="fa-solid fa-arrow-left"></i>
+      </a>
+
+    <button id="save-button">
+        <i class="fa-solid fa-heart"></i>
+        Save
+    </button>
+
+</header>
+
+
+<main class="code-layout">
+
+
+<!-- PREVIEW -->
+
+<section class="preview-section">
+
+    <div class="tabs">
+
+        <button class="active">
+            Preview
+        </button>
+
+    </div>
+
+    <div id="preview"
+         class="preview">
+    </div>
+
+</section>
+
+
+<!-- CODE -->
+
+<section class="code-section">
+
+    <div class="code-tabs">
+
+        <button class="active"
+                data-code="html">
+            HTML
+        </button>
+
+        <button data-code="css">
+            CSS
+        </button>
+
+        <button data-code="javascript">
+            JavaScript
+        </button>
+
+    </div>
+
+
+    <pre id="code-output"></pre>
+
+</section>
+
+
+<!-- EXPLANATION -->
+
+<section class="explanation-section">
+
+    <h2>
+        Explanation
+    </h2>
+
+    <div id="explanation">
+
+        <div class="explanation-item">
+
+            <code>&lt;h1&gt;</code>
+
+            <p>
+                Main heading that communicates
+                the primary message.
+            </p>
+
+        </div>
+
+        <div class="explanation-item">
+
+            <code>&lt;section&gt;</code>
+
+            <p>
+                Defines a separate section
+                of the frontend page.
+            </p>
+
+        </div>
+
+        <div class="explanation-item">
+
+            <code>CSS</code>
+
+            <p>
+                Controls layout, spacing,
+                colors and visual appearance.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<script src="code.js"></script>
+
+</body>
+</html>

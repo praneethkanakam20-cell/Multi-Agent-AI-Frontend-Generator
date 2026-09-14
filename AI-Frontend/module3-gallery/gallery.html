@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>AI Frontend - Design Gallery</title>
+
+<link rel="stylesheet" href="gallery.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+<div class="gallery-page">
+
+
+<header class="gallery-header">
+
+    <a href="../module2-generation/generate.html"
+       class="back">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+    </a>
+
+
+    <h1>Design Variations</h1>
+
+
+    <span class="count" id="design-count">
+        0 Designs
+    </span>
+
+</header>
+
+
+
+<main>
+
+    <div id="design-grid"
+         class="design-grid">
+    </div>
+
+</main>
+
+</div>
+
+
+
+<!--  PREVIEW MODAL-->
+
+<!-- FULL SCREEN DESIGN PREVIEW -->
+
+<div
+    id="preview-modal"
+    class="preview-modal hidden"
+>
+
+    <button
+        class="close-preview"
+        onclick="closePreview()"
+        aria-label="Close Preview"
+    >
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <iframe
+        id="preview-frame"
+        title="Full Design Preview"
+        sandbox="allow-scripts"
+    ></iframe>
+
+</div>
+
+
+
+<script src="gallery.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Frontend - AI Powered Design Generator</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-atom"></i>
+            <span>AI Frontend</span>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#docs">Docs</a>
+        </nav>
+
+        <div class="nav-buttons">
+
+            <button class="login-btn" onclick="goToLogin()">
+                Login
+            </button>
+
+            <button class="get-started-btn" onclick="goToLogin()">
+                Get Started
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!--MAIN-->
+
+    <main>
+
+
+        <!-- HERO-->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="ai-badge">
+                    <i class="fa-solid fa-sparkles"></i>
+                    AI Powered
+                </div>
+
+                <h1>
+                    Turn Your Ideas Into
+                    <span>Beautiful Frontend Designs</span>
+                </h1>
+
+                <p>
+                    Generate multiple frontend designs from your prompt
+                    or partial code using intelligent AI multi-agent
+                    technology.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <button class="primary-btn" onclick="goToLogin()">
+                        Start Generating
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <button class="secondary-btn"
+                        onclick="scrollToHowItWorks()">
+
+                        <i class="fa-solid fa-play"></i>
+                        View Demo
+
+                    </button>
+
+                </div>
+
+
+                <!-- STATS -->
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <h3>10K+</h3>
+                        <p>Designs Generated</p>
+                    </div>
+
+                    <div class="stat">
+                        <h3>5K+</h3>
+                        <p>Happy Users</p>
+                    </div>
+
+                    <div class="stat">
+                        <h3>98%</h3>
+                        <p>Accuracy Rate</p>
+                    </div>
+
+                    <div class="stat">
+                        <h3>24/7</h3>
+                        <p>AI Support</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!--HERO PREVIEW -->
+
+            <div class="hero-preview">
+
+                <div class="preview-glow"></div>
+
+                <div class="browser-window">
+
+                    <div class="browser-header">
+
+                        <div class="browser-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="browser-address">
+                            ai-frontend.app
+                        </div>
+
+                    </div>
+
+
+                    <div class="preview-body">
+
+                        <div class="preview-sidebar">
+
+                            <div class="mini-logo">
+                                <i class="fa-solid fa-atom"></i>
+                            </div>
+
+                            <div class="mini-line"></div>
+                            <div class="mini-line short"></div>
+                            <div class="mini-line"></div>
+                            <div class="mini-line short"></div>
+
+                        </div>
+
+
+                        <div class="preview-main">
+
+                            <div class="preview-title"></div>
+
+                            <div class="preview-subtitle"></div>
+
+
+                            <div class="preview-cards">
+
+                                <div class="preview-card">
+
+                                    <div class="card-icon">
+                                        <i class="fa-solid fa-code"></i>
+                                    </div>
+
+                                    <div class="small-line"></div>
+                                    <div class="small-line short"></div>
+
+                                </div>
+
+
+                                <div class="preview-card">
+
+                                    <div class="card-icon purple">
+                                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                    </div>
+
+                                    <div class="small-line"></div>
+                                    <div class="small-line short"></div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="preview-large-card">
+
+                                <div class="fake-heading"></div>
+
+                                <div class="fake-text"></div>
+                                <div class="fake-text"></div>
+                                <div class="fake-text short"></div>
+
+                                <div class="fake-button">
+                                    Generate Design
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!--FEATURES -->
+
+        <section id="features" class="features-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    POWERFUL FEATURES
+                </p>
+
+                <h2>
+                    Everything You Need to
+                    <span>Create Better</span>
+                </h2>
+
+                <p>
+                    From idea to production-ready frontend,
+                    AI Frontend helps you at every step.
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+
+                    <h3>
+                        AI Design Generation
+                    </h3>
+
+                    <p>
+                        Generate multiple beautiful UI designs
+                        from a simple natural language prompt.
+                    </p>
+
+                </div>
+
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+
+                    <h3>
+                        Multiple Designs
+                    </h3>
+
+                    <p>
+                        Compare different generated designs
+                        and choose the one you like.
+                    </p>
+
+                </div>
+
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <h3>
+                        Clean Code
+                    </h3>
+
+                    <p>
+                        Get structured HTML, CSS and JavaScript
+                        with every selected design.
+                    </p>
+
+                </div>
+
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+
+                    <h3>
+                        Multi-Agent AI
+                    </h3>
+
+                    <p>
+                        Multiple AI agents work together to
+                        refine and improve your frontend.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= HOW IT WORKS ================= -->
+
+        <section id="how-it-works" class="how-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    HOW IT WORKS
+                </p>
+
+                <h2>
+                    From Idea to
+                    <span>Frontend</span>
+                </h2>
+
+                <p>
+                    Create beautiful frontend designs
+                    in just four simple steps.
+                </p>
+
+            </div>
+
+
+            <div class="steps-container">
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <div class="step-icon">
+                        <i class="fa-solid fa-pen"></i>
+                    </div>
+
+                    <h3>
+                        Enter Prompt or Code
+                    </h3>
+
+                    <p>
+                        Describe your idea or provide
+                        your existing frontend code.
+                    </p>
+
+                </div>
+
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <div class="step-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+
+                    <h3>
+                        AI Generates Designs
+                    </h3>
+
+                    <p>
+                        Our AI agents analyze your input
+                        and create multiple designs.
+                    </p>
+
+                </div>
+
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <div class="step-icon">
+                        <i class="fa-solid fa-hand-pointer"></i>
+                    </div>
+
+                    <h3>
+                        Choose & Customize
+                    </h3>
+
+                    <p>
+                        Preview the generated designs
+                        and select your favorite.
+                    </p>
+
+                </div>
+
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        04
+                    </div>
+
+                    <div class="step-icon">
+                        <i class="fa-solid fa-download"></i>
+                    </div>
+
+                    <h3>
+                        Get Code & Explanation
+                    </h3>
+
+                    <p>
+                        Receive clean frontend code
+                        with a detailed explanation.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PRICING-->
+
+        <section id="pricing" class="pricing-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    SIMPLE PRICING
+                </p>
+
+                <h2>
+                    Start Creating
+                    <span>For Free</span>
+                </h2>
+
+            </div>
+
+
+            <div class="pricing-card">
+
+                <div class="pricing-icon">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+
+                <h3>
+                    Free Plan
+                </h3>
+
+                <div class="price">
+                    <span>₹</span>0
+                    <small>/month</small>
+                </div>
+
+                <p>
+                    Perfect for students and developers.
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        AI Design Generation
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Multiple Designs
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        HTML/CSS/JS Code
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Design Preview
+                    </li>
+
+                </ul>
+
+
+                <button onclick="goToLogin()">
+                    Get Started
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!--DOCS -->
+
+        <section id="docs" class="docs-section">
+
+            <div class="docs-content">
+
+                <p class="section-label">
+                    DOCUMENTATION
+                </p>
+
+                <h2>
+                    Build Faster With
+                    <span>AI Frontend</span>
+                </h2>
+
+                <p>
+                    Describe what you want to build,
+                    choose a design and get
+                    production-ready frontend code.
+                </p>
+
+                <button
+                    onclick="goToLogin()"
+                    class="primary-btn">
+
+                    Start Building
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!--FOOTER-->
+
+    <footer>
+
+        <div class="footer-logo">
+
+            <i class="fa-solid fa-atom"></i>
+            AI Frontend
+
+        </div>
+
+        <p>
+            © 2026 AI Frontend.
+            Build beautiful interfaces with AI.
+        </p>
+
+        <div class="social-icons">
+
+            <i class="fa-brands fa-github"></i>
+
+            <i class="fa-brands fa-linkedin"></i>
+
+            <i class="fa-brands fa-x-twitter"></i>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

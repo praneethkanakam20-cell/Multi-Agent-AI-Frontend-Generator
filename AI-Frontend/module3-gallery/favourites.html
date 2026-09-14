@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Frontend - Saved Designs</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="favourites.css">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <a href="../module2-generation/generate.html"
+           class="sidebar-logo-link">
+
+            <div class="sidebar-logo">
+
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                <span>AI Frontend</span>
+
+            </div>
+
+        </a>
+
+
+        <nav>
+
+            <a href="../index.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="favourites.html"
+               class="active">
+
+                <i class="fa-solid fa-bookmark"></i>
+
+                <span>Saved Designs</span>
+
+            </a>
+
+
+            <a href="history.html">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                <span>History</span>
+
+            </a>
+
+
+            <a href="../module2-generation/generate.html#settings">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+
+            <a href="../module2-generation/generate.html#profile">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>Profile</span>
+
+            </a>
+
+
+            <a href="#"
+               id="logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <div class="main-area">
+
+        <header class="top-header">
+
+            <div></div>
+
+            <div class="header-right">
+
+                <button class="notification-btn">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                </button>
+
+                <div class="user-avatar"
+                     id="header-avatar">
+
+                    M
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- SAVED DESIGNS VIEW -->
+
+        <main class="content">
+
+            <div class="page-heading">
+
+                <span class="eyebrow">
+                    YOUR COLLECTION
+                </span>
+
+                <h1>
+                    Saved Designs
+                </h1>
+
+                <p>
+                    View and manage the designs you have saved.
+                </p>
+
+            </div>
+
+
+            <!-- DESIGN COUNT -->
+
+            <div class="collection-info">
+
+                <div>
+
+                    <i class="fa-solid fa-bookmark"></i>
+
+                    <span id="saved-count">
+                        0 saved designs
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- DESIGNS -->
+
+            <section
+                id="saved-designs"
+                class="design-grid">
+
+            </section>
+
+
+            <!-- EMPTY -->
+
+            <section
+                id="empty-state"
+                class="empty-state hidden">
+
+                <div class="empty-icon">
+
+                    <i class="fa-regular fa-bookmark"></i>
+
+                </div>
+
+                <h2>
+                    No Saved Designs
+                </h2>
+
+                <p>
+                    Designs that you save from the gallery
+                    will appear here.
+                </p>
+
+                <button
+                    class="primary-btn"
+                    id="create-design">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    Create Design
+
+                </button>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+<!-- PREVIEW MODAL -->
+
+<div
+    id="preview-modal"
+    class="preview-modal hidden">
+
+    <div class="preview-box">
+
+        <div class="preview-header">
+
+            <div>
+
+                <span class="preview-label">
+                    SAVED DESIGN
+                </span>
+
+                <h2 id="preview-title">
+                    Design Preview
+                </h2>
+
+            </div>
+
+            <button
+                class="close-preview"
+                id="close-preview">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <div
+            class="preview-frame"
+            id="preview-frame">
+
+        </div>
+
+
+        <div class="preview-actions">
+
+            <button
+                class="secondary-btn"
+                id="remove-preview">
+
+                <i class="fa-solid fa-trash"></i>
+
+                Remove from Saved
+
+            </button>
+
+
+            <button
+                class="primary-btn"
+                id="open-code">
+
+                <i class="fa-solid fa-code"></i>
+
+                View Code
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- LOGOUT MODAL -->
+
+<div
+    class="logout-modal hidden"
+    id="logout-modal">
+
+    <div class="logout-box">
+
+        <div class="logout-icon">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+        </div>
+
+        <h2>
+            Logout?
+        </h2>
+
+        <p>
+            Are you sure you want to logout from AI Frontend?
+        </p>
+
+        <div class="logout-actions">
+
+            <button
+                class="cancel-btn"
+                id="cancel-logout">
+
+                Cancel
+
+            </button>
+
+            <button
+                class="confirm-logout"
+                id="confirm-logout">
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="favourites.js"></script>
+
+</body>
+
+</html>

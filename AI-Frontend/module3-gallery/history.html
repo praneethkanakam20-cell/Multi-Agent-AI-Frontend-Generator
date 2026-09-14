@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Frontend - History</title>
+
+    <link rel="stylesheet" href="history.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+<div class="history-page">
+
+
+    <!-- HEADER-->
+
+    <header class="history-header">
+
+
+        <!-- BACK -->
+          <a href="../module2-generation/generate.html" class="back" aria-label="Back">
+              <i class="fa-solid fa-arrow-left"></i>
+          </a>
+
+
+        <!-- TITLE -->
+
+        <h1>
+            Generation History
+        </h1>
+
+
+        <!-- COUNT -->
+
+        <span class="count"
+              id="history-count">
+
+            0 Generations
+
+        </span>
+
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main>
+
+        <div id="history-list"
+             class="history-list">
+        </div>
+
+    </main>
+
+
+</div>
+
+
+<!--GENERATION MODAL -->
+
+<div id="history-modal"
+     class="history-modal hidden">
+
+
+    <div class="history-modal-box">
+
+
+        <!-- MODAL HEADER -->
+
+        <div class="modal-header">
+
+
+            <div class="modal-heading">
+
+                <span class="modal-label">
+                    SAVED GENERATION
+                </span>
+
+
+                <h2 id="modal-title">
+                    Generated Designs
+                </h2>
+
+
+                <p id="modal-date"></p>
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button class="modal-back-btn"
+                        onclick="closeHistoryModal()"
+                        aria-label="Back to History">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                </button>
+
+                <button class="close-btn"
+                        onclick="closeHistoryModal()"
+                        aria-label="Close">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- FIVE DESIGNS -->
+
+        <div id="history-design-grid"
+             class="history-design-grid">
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<script src="./history.js?v=2" defer></script>
+
+</body>
+
+</html>

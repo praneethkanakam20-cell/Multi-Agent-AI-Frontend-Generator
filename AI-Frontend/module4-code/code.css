@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background: #faf9ff;
+
+    color: #222;
+}
+
+.code-header {
+    height: 70px;
+
+    background: white;
+
+    border-bottom: 1px solid #ddd;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 30px;
+}
+
+.code-header a {
+    color: #633bbc;
+
+    text-decoration: none;
+}
+
+
+.code-header button {
+    border: none;
+
+    background: #633bbc;
+
+    color: white;
+
+    padding: 9px 17px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.code-layout {
+    display: grid;
+
+    grid-template-columns:
+        1.2fr 1fr 1fr;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    min-height: calc(100vh - 70px);
+}
+
+.preview-section,
+.code-section,
+.explanation-section {
+    background: white;
+
+    border: 1px solid #e3e1ea;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+}
+
+.tabs,
+.code-tabs {
+    height: 50px;
+
+    border-bottom: 1px solid #eee;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 15px;
+
+    gap: 8px;
+}
+
+.tabs button,
+.code-tabs button {
+    border: none;
+
+    background: transparent;
+
+    padding: 9px 15px;
+
+    cursor: pointer;
+
+    color: #777;
+}
+
+.tabs button.active,
+.code-tabs button.active {
+    color: #633bbc;
+
+    border-bottom: 2px solid #633bbc;
+}
+
+.preview {
+    height: calc(100% - 50px);
+
+    min-height: 600px;
+
+    padding: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #17102e;
+
+    color: white;
+
+    font-size: 30px;
+
+    font-weight: 700;
+}
+
+.code-section pre {
+    padding: 20px;
+
+    height: calc(100% - 50px);
+
+    overflow: auto;
+
+    background: #17142a;
+
+    color: #eee;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    white-space: pre-wrap;
+}
+
+.explanation-section {
+    padding: 20px;
+}
+
+.explanation-section h2 {
+    margin-bottom: 20px;
+}
+
+.explanation-item {
+    border: 1px solid #eee;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    margin-bottom: 12px;
+}
+
+.explanation-item code {
+    color: #633bbc;
+
+    font-weight: 700;
+
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+.explanation-item p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+@media(max-width:1000px) {
+
+    .code-layout {
+        grid-template-columns: 1fr;
+    }
+
+}
