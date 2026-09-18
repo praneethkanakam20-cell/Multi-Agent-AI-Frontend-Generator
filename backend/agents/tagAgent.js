@@ -1,4 +1,4 @@
-const geminiClient = require("../services/cerebrasClient");
+const geminiClient = require("../services/geminiClient3");
 
 async function tagAgent(code) {
 
